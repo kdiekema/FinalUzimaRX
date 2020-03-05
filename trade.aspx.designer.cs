@@ -11,7 +11,7 @@ namespace UzimaRX
 {
 
 
-    public partial class Contact
+    public partial class WebForm1
     {
     }
 }
