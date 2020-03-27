@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Pending.aspx.cs" Inherits="UzimaRX.Pending" %>
+﻿<%@ Page Title="Pending" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Pending.aspx.cs" Inherits="UzimaRX.Pending" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>

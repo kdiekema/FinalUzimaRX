@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Expired.aspx.cs" Inherits="UzimaRX.Expired" %>
+﻿<%@ Page Title="Expired" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Expired.aspx.cs" Inherits="UzimaRX.Expired" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
