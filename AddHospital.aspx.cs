@@ -13,5 +13,15 @@ namespace UzimaRX
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

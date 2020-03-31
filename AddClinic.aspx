@@ -8,27 +8,36 @@
     <div class="form-group col-md-12">
         <label class="control-label col-sm-3">Location Name:</label>
         <div class="col-sm-5">
-            <asp:TextBox ID="txtFName" runat="server" CssClass="form-control txtbox"></asp:TextBox>
+            <asp:TextBox ID="txtLName" runat="server" CssClass="form-control txtbox"></asp:TextBox>
         </div>
         <div class="col-sm-4">
             <asp:RequiredFieldValidator ID="rfvFirstName" runat="server"
-                ErrorMessage="Location Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtFName">Required</asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="regFName" runat="server" ControlToValidate="txtFName" data-val="True"
-                ValidationGroup="ValidGroup" Display="Dynamic" ValidationExpression="^[a-zA-Z]+$" ErrorMessage="Name must be in Alpha characters" />
+                ErrorMessage="Location Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtLName">Required</asp:RequiredFieldValidator>
             </div>
     </div>
 
+    <div class="form-group col-md-12">
+        <label class="control-label col-sm-3">Supplier:</label>
+        <div class="col-sm-5">
+            <asp:DropDownList ID="ddlSupp" runat="server" DataSourceID="SqlDataSource1" DataTextField="LocationName" DataValueField="LocationName" Height="31px">
+                <asp:ListItem Selected="True" Value="None">- Select Supplier -</asp:ListItem>
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [LocationName] FROM [UzimaLocation]"></asp:SqlDataSource>
+        </div>
+          <div class="col-sm-4">
+            <asp:RequiredFieldValidator ID="rfvState" runat="server" InitialValue="None"
+                ErrorMessage="Supplier" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="ddlSupp"></asp:RequiredFieldValidator>
+       </div>
+        </div>
 
     <div class="form-group col-md-12">
         <label class="control-label col-sm-3">Address:</label>
         <div class="col-sm-5">
-            <asp:TextBox ID="txtLName" runat="server" CssClass="form-control txtbox"></asp:TextBox>
+            <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control txtbox"></asp:TextBox>
         </div>
         <div class="col-sm-4">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                ErrorMessage="Address" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtLName">Required</asp:RequiredFieldValidator>
-             <asp:RegularExpressionValidator ID="regLName" runat="server" ControlToValidate="txtLName"
-                ValidationGroup="ValidGroup" Display="Dynamic" ValidationExpression="^[a-zA-Z]+$" Text="Name must be in Alpha characters" />
+                ErrorMessage="Address" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtAddress">Required</asp:RequiredFieldValidator>
         </div>
     </div>
 
