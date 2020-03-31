@@ -1,12 +1,10 @@
 ﻿<%@ Page Title="Inventory" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Inventory.aspx.cs" Inherits="UzimaRX.Inventory" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-<<<<<<< HEAD
     <h2><%: Title %></h2>
     <h3>Your application description page.</h3>
     <p>Use this area to provide additional information.</p>
 </asp:Content>
-=======
     <h2>Current Inventory</h2>
     <p>&nbsp;</p>
     <p>
@@ -32,5 +30,3 @@
         <asp:SqlDataSource ID="CapstoneDB" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [UzimaInventory]"></asp:SqlDataSource>
     </p>
     </asp:Content>
-
->>>>>>> e5c3442da9ff42cf5cb2832946baffdd0ac7fc73

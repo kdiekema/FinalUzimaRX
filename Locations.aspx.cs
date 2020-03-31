@@ -13,5 +13,29 @@ namespace UzimaRX
         {
 
         }
+
+        protected void BtnClinic(object sender, EventArgs e)
+        {
+            Response.Redirect("AddClinic.aspx");
+        }
+
+        protected void BtnHospital(object sender, EventArgs e)
+        {
+            Response.Redirect("AddHospital.aspx");
+
+        }
+
+        protected void BtnSupplier(object sender, EventArgs e)
+        {
+            Response.Redirect("AddSupplier.aspx");
+
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

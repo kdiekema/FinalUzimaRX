@@ -2,7 +2,31 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
-    <h3>Your application description page.</h3>
-    <p>Use this area to provide additional information.</p>
+
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" DataSourceID="Capstone2020" ForeColor="Black" Width="1181px">
+        <Columns>
+            <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" />
+            <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" />
+            <asp:BoundField DataField="BrandName" HeaderText="BrandName" SortExpression="BrandName" />
+            <asp:BoundField DataField="ApplicationNumber" HeaderText="ApplicationNumber" SortExpression="ApplicationNumber" />
+            <asp:BoundField DataField="Manufacturer" HeaderText="Manufacturer" SortExpression="Manufacturer" />
+            <asp:BoundField DataField="ManufacturerLocation" HeaderText="ManufacturerLocation" SortExpression="ManufacturerLocation" />
+            <asp:BoundField DataField="ApprovalNumber" HeaderText="ApprovalNumber" SortExpression="ApprovalNumber" />
+            <asp:BoundField DataField="Schedule" HeaderText="Schedule" SortExpression="Schedule" />
+            <asp:BoundField DataField="License" HeaderText="License" SortExpression="License" />
+            <asp:BoundField DataField="Ingredients" HeaderText="Ingredients" SortExpression="Ingredients" />
+            <asp:BoundField DataField="PackSize" HeaderText="PackSize" SortExpression="PackSize" />
+        </Columns>
+        <FooterStyle BackColor="#CCCCCC" />
+        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+        <RowStyle BackColor="White" />
+        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+        <SortedAscendingHeaderStyle BackColor="Gray" />
+        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+        <SortedDescendingHeaderStyle BackColor="#383838" />
+    </asp:GridView>
+    <asp:SqlDataSource ID="Capstone2020" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [UzimaDrug]"></asp:SqlDataSource>
 </asp:Content>
 
