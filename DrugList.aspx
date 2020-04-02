@@ -3,6 +3,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
 
+    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="Capstone2020"></asp:DropDownList>
+
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" DataSourceID="Capstone2020" ForeColor="Black" Width="1181px">
         <Columns>
             <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" />
