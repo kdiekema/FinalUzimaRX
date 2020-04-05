@@ -13,21 +13,39 @@ namespace UzimaRX {
     public partial class Inventory {
         
         /// <summary>
-        /// GridView1 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// CapstoneDB control.
+        /// InventorySearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CapstoneDB;
+        protected global::System.Web.UI.WebControls.TextBox InventorySearch;
+        
+        /// <summary>
+        /// InventorySearchBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button InventorySearchBtn;
+        
+        /// <summary>
+        /// InventoryGridview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView InventoryGridview;
     }
 }
