@@ -29,10 +29,10 @@
         </div>
 
           <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="User" CssClass="col-md-2 control-label">Username</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Username" CssClass="col-md-2 control-label">Username</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="User" CssClass="form-control" TextMode="singleline" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="User"
+                <asp:TextBox runat="server" ID="Username" CssClass="form-control" TextMode="singleline" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="Username"
                     CssClass="text-danger" ErrorMessage="Username is required." />
             </div>
         </div>

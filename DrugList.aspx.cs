@@ -27,10 +27,13 @@ namespace UzimaRX
             sda.Fill(dt);
             DrugListGridView.DataSource = dt;
             DrugListGridView.DataBind();*/
+            
         }
 
         protected void InventorySearchBtn_Click(object sender, EventArgs e)
         {
+            DrugListGridView.Visible = true;
+
             string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
@@ -54,5 +57,30 @@ namespace UzimaRX
             DrugListGridView.DataBind();
         }
 
+        protected void show_all_click(object sender, EventArgs e)
+        {
+            DrugListGridView.Visible = true;
+
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            string sqlquery = "Select *" +
+                "From[UzimaDrug]";
+            sqlcomm.Parameters.AddWithValue("DrugName", DrugListSearch.Text);
+            sqlcomm.CommandText = sqlquery;
+            sqlcomm.Connection = sqlconn;
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            sda.Fill(dt);
+            DrugListGridView.DataSource = dt;
+            DrugListGridView.DataBind();
+
+        }
+
+        protected void btn_clear_click(object sender, EventArgs e)
+        {
+            DrugListGridView.Visible = false;
+        }
     }
 }

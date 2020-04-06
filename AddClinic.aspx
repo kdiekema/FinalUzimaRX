@@ -22,7 +22,7 @@
             <asp:DropDownList ID="ddlSupp" runat="server" DataSourceID="SqlDataSource1" DataTextField="LocationName" DataValueField="LocationName" Height="31px">
                 <asp:ListItem Selected="True" Value="None">- Select Supplier -</asp:ListItem>
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [LocationName] FROM [UzimaLocation]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:uzimarxConnectionString %>" SelectCommand="SELECT UzimaLocation.LocationName FROM UzimaLocation INNER JOIN UzimaLocationType ON UzimaLocation.Id = UzimaLocationType.LocationId WHERE (UzimaLocationType.LocationType = N'Supplier') OR (UzimaLocationType.LocationType = N'Hospital')"></asp:SqlDataSource>
         </div>
           <div class="col-sm-4">
             <asp:RequiredFieldValidator ID="rfvState" runat="server" InitialValue="None"
