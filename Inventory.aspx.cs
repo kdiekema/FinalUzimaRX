@@ -18,7 +18,7 @@ namespace UzimaRX
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
-            string sqlquery = "Select [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate], [UzimaDrug].[Id] " +
+            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate] " +
                 "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
                 "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id]";
             sqlcomm.CommandText = sqlquery;
@@ -30,18 +30,13 @@ namespace UzimaRX
             InventoryGridview.DataBind();
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void InventorySearchBtn_Click(object sender, EventArgs e)
         {
             string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
-            string sqlquery = "Select [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate], [UzimaDrug].[Id] " +
+            string sqlquery = "Select [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate], [UzimaInventory].[Id]" +
                 "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
                 "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [DrugName] like '%'+@DrugName+'%'";
             sqlcomm.CommandText = sqlquery;
@@ -52,6 +47,10 @@ namespace UzimaRX
             sda.Fill(dt);
             InventoryGridview.DataSource = dt;
             InventoryGridview.DataBind();
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -59,7 +59,6 @@
                             <a runat="server" href="~/ReceiveOrder">Receive Order</a>
                           </div>
                         </li>
-                        <li><a runat="server" href="~/Dispense">Dispense</a></li>
                         <li><a runat="server" href="~/Locations">Locations</a></li>
                         <li><a runat="server" href="~/trade">Trade</a></li>
                     </ul>
