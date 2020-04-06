@@ -4,8 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+<<<<<<< HEAD
+using System.Data;
+using System.Data.SqlClient;
+=======
 using System.Data.SqlClient;
 using System.Data;
+>>>>>>> 45c9215e3e1cec543b21fdf891c7c6cd5bad1515
 using System.Configuration;
 
 namespace UzimaRX
@@ -53,5 +58,6 @@ namespace UzimaRX
             DrugListGridView.PageIndex = e.NewPageIndex;
             DrugListGridView.DataBind();
         }
+
     }
 }
