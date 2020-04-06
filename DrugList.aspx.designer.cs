@@ -13,30 +13,30 @@ namespace UzimaRX {
     public partial class DurgList {
         
         /// <summary>
-        /// DropDownList1 control.
+        /// DrugListSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox DrugListSearch;
         
         /// <summary>
-        /// GridView1 control.
+        /// DrugListSearchBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button DrugListSearchBtn;
         
         /// <summary>
-        /// Capstone2020 control.
+        /// DrugListGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Capstone2020;
+        protected global::System.Web.UI.WebControls.GridView DrugListGridView;
     }
 }

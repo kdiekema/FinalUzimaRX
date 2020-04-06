@@ -54,7 +54,6 @@
                         <li class="dropdown">
                           <button class="dropbtn">Orders</button>
                           <div class="dropdown-content">
-                            <a runat="server" href="~/PlaceOrder">Place Order</a>
                             <a runat="server" href="~/SendOrder">Send Order</a>
                             <a runat="server" href="~/ReceiveOrder">Receive Order</a>
                           </div>

@@ -31,21 +31,21 @@ namespace UzimaRX {
         protected global::System.Web.UI.WebControls.GridView DispenseGridview;
         
         /// <summary>
-        /// TextBox1 control.
+        /// DispenseQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox DispenseQuantity;
         
         /// <summary>
-        /// Button1 control.
+        /// DispenseBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button DispenseBtn;
     }
 }

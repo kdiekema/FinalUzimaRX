@@ -4,10 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Dispense</title>
 </head>
 <body>
     <form id="form1" runat="server">
+        <h1>Dispense an Item</h1>
         <div>
             <asp:GridView ID="DispenseGridview" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="95%" >
                 <Columns>
@@ -31,8 +32,8 @@
 
 
 
-            Dispense Quantity <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" Text="Dispense" />
+            Dispense Quantity <asp:TextBox ID="DispenseQuantity" runat="server"></asp:TextBox>
+            <asp:Button ID="DispenseBtn" runat="server" Text="Dispense" />
         </div>
     </form>
 </body>

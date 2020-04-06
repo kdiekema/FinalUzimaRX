@@ -9,7 +9,7 @@
     <p>
         Search by Drug Name: <asp:TextBox ID="InventorySearch" runat="server"></asp:TextBox>
         <asp:Button ID="InventorySearchBtn" runat="server" Text="Search" OnClick="InventorySearchBtn_Click"/>
-        <asp:GridView ID="InventoryGridview" runat="server" AllowPaging="True" AllowSorting="False" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PageSize="15" Width="95%" NavigateUrl="Dispense.aspx?Id={0}&Name={1}&ExpirationDate={2}">
+        <asp:GridView ID="InventoryGridview" runat="server" AllowPaging="True" AllowSorting="False" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" OnSelectedIndexChanged="InventoryGridview_SelectedIndexChanged" PageSize="15" Width="95%" NavigateUrl="Dispense.aspx?Id={0}&Name={1}&ExpirationDate={2}">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Inventory ID" Visible="false" />
                 <asp:BoundField DataField="DrugName" HeaderText="Drug Name" SortExpression="DrugName" />              
