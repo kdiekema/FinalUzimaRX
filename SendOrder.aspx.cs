@@ -42,11 +42,11 @@ namespace UzimaRX
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
-            string sqlquery = "UPDATE UzimaInventory" + " SET [StatusId] = 2" + " WHERE [Id] = " + value;
+            string sqlquery = "UPDATE UzimaInventory" + " SET [StatusId] = 0" + " WHERE [Id] = " + value;
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             sqlcomm.ExecuteNonQuery();
-            Response.Redirect("~/SendOrder.aspx");
+            Response.Redirect("~/ReceiveOrder.aspx");
         }
     }
 }

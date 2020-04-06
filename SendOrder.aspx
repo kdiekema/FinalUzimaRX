@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Orders to be Sent</h2>
   
-    <asp:GridView ID="SendOrderGridview" runat="server" AllowPaging="True" AllowSorting="False" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" PageSize="15" Width="95%" NavigateUrl="Dispense.aspx?Id={0}&Name={1}&ExpirationDate={2}">
+    <asp:GridView ID="SendOrderGridview" runat="server" AllowPaging="True" AllowSorting="False" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" PageSize="15" Width="95%">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Inventory ID" />
                 <asp:BoundField DataField="DrugName" HeaderText="Drug Name" SortExpression="DrugName" />              
