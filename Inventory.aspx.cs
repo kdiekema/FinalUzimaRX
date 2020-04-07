@@ -52,5 +52,32 @@ namespace UzimaRX
         protected void InventoryGridview_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        protected void show_all_click(object sender, EventArgs e)
+        {
+            InventoryGridview.Visible = true;
+
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            string sqlquery = "Select [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate], [UzimaInventory].[Id]" +
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 0";
+            sqlcomm.Parameters.AddWithValue("DrugName", InventorySearch.Text);
+            sqlcomm.CommandText = sqlquery;
+            sqlcomm.Connection = sqlconn;
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            sda.Fill(dt);
+            InventoryGridview.DataSource = dt;
+            InventoryGridview.DataBind();
+
+        }
+
+        protected void btn_clear_click(object sender, EventArgs e)
+        {
+            InventoryGridview.Visible = false;
+        }
     }
 }
