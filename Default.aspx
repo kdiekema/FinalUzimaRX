@@ -3,20 +3,10 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <br />
     <br />
-   <div class="row">
-        <div class="col-md-2">
-          <a class="link" href="../dispensed"> Dispensed </a>
-        </div>
-        <div class="col-md-2">
-          <a class="link" href="../tbd"> To be destroyed
-        </div>
-        <div class="col-md-2">
-          <a class="link" href="../pending"> Pending   </a>
-        </div>
-    </div>
+
      <div class="row">
         <div class="col-md-6">
-            <h3>Expired drugs</h3>
+            <h2>Expired drugs</h2>
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                 <Columns>
                     <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" />
@@ -47,7 +37,7 @@ ORDER BY UzimaInventory.ExpirationDate ASC
             <a class="link" target="_blank" href="../expired"> Complete expired drugs list</a>
         </div>
         <div class="col-md-6">
-            <h3>Expiring -&nbsp; next 60 days</h3>
+            <h2>Expiring -&nbsp; next 60 days</h2>
             <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                 <Columns>
                     <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" />
@@ -77,6 +67,34 @@ ORDER BY UzimaInventory.ExpirationDate ASC
             <br />
           <a class="link" target="_blank" href="../expiring"> Complete expriring drugs list </a>
 
+        </div>
+         <br />
+         <br />
+    </div>
+     <div class="row">
+        <div class="col-md-4">
+            <h4 class ="Gray">SquareSpace</h4>
+            <p class="Gray">
+                The UzimaRx Square Space was created to tell Rapula and UzimaRx&#39;s story and has functionality for customer ordering<p /> <p>
+                <a class="btn btn-default" target="_blank" href="https://www.squarespace.com">SquareSpace »</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h4 class="Gray">Dispensed Table</h4>
+            <p class="Gray">
+                This table shows drugs that have previously been dispensed 
+            </p>
+            <p>
+                <a class="btn btn-default" target="_blank" href="../Dispensed">Go to table &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h4 class="Gray">To be destroyed table&nbsp;&nbsp;&nbsp; </h4>
+            <p class="Gray">
+                This table shows drugs that have expired and are waiting to be destroyed</p>
+            <p>
+                <a class="btn btn-default" target="_blank" href="../tbd">Go to table &raquo;</a>
+            </p>
         </div>
     </div>
 

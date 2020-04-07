@@ -197,7 +197,6 @@
     <Content Include="Account\Web.config" />
     <Content Include="Inventory.aspx" />
     <Content Include="Locations.aspx" />
-    <Content Include="Pending.aspx" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="ReceiveOrder.aspx" />
     <Content Include="SendOrder.aspx" />
@@ -429,13 +428,6 @@
       <DependentUpon>Locations.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Pending.aspx.cs">
-      <DependentUpon>Pending.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pending.aspx.designer.cs">
-      <DependentUpon>Pending.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PlaceOrder.aspx.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
