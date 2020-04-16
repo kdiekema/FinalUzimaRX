@@ -181,6 +181,7 @@
     <Content Include="Dispense.aspx" />
     <Content Include="Dispensed.aspx" />
     <Content Include="DrugList.aspx" />
+    <Content Include="ErrorPage.aspx" />
     <Content Include="Expired.aspx" />
     <Content Include="Expiring.aspx" />
     <Content Include="favicon.ico" />
@@ -395,6 +396,13 @@
     </Compile>
     <Compile Include="DrugList.aspx.designer.cs">
       <DependentUpon>DrugList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Expired.aspx.cs">
       <DependentUpon>Expired.aspx</DependentUpon>
