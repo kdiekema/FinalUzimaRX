@@ -8,9 +8,7 @@
                 <asp:BoundField DataField="Id" HeaderText="Inventory ID" />
                 <asp:BoundField DataField="DrugName" HeaderText="Drug Name" SortExpression="DrugName" />              
                 <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
-                <asp:BoundField DataField="LocationName" HeaderText="Location Name" SortExpression="LocationName" />
                 <asp:BoundField DataField="DateOrdered" HeaderText="Date Ordered" DataFormatString="{0:dd/MM/yyyy}" SortExpression="DateOrdered" />
-                <asp:BoundField DataField="ExpirationDate" HeaderText="Expiration Date" DataFormatString="{0:dd/MM/yyyy}" SortExpression="ExpirationDate" />
                 <asp:TemplateField HeaderText="Send Order">
                     <ItemTemplate>
                         <asp:Button ID="SendOrderBtn" runat="server" OnClick="SendOrderBtn_Click" Text="Send Order" />

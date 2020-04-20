@@ -36,7 +36,7 @@
             </asp:GridView>
 
             Order Quantity <asp:TextBox ID="OrderQuantity" runat="server"></asp:TextBox>
-            <asp:Button ID="OrderBtn" runat="server" Text="Order" />
+            <asp:Button ID="OrderBtn" runat="server" Text="Order" OnClick="OrderBtn_Click" />
 
         </div>
     </form>
