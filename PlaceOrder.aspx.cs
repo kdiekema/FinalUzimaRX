@@ -46,5 +46,23 @@ namespace UzimaRX
             sqlcomm.ExecuteNonQuery();
             Response.Redirect("~/DrugList.aspx");
         }
+
+        protected void PlaceOrderGridview_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            PlaceOrderGridview.PageIndex = e.NewPageIndex;
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            string quantityOrdered = OrderQuantity.Text;
+            string sqlquery = "DECLARE @count INT " + "DECLARE @quantity INT " + "SET @count = 0 " + "SET @quantity = " + quantityOrdered + " WHILE @count != @quantity" + " BEGIN" +
+                " INSERT INTO [UzimaInventory](DateOrdered, LastModifiedBy, DrugID, StatusID) " + "VALUES(GETDATE(), 1, " + Request.QueryString["Id"] + ", 1)" + " SET @count += 1 " + "END";
+
+
+            sqlcomm.CommandText = sqlquery;
+            sqlcomm.Connection = sqlconn;
+            sqlcomm.ExecuteNonQuery();
+            Response.Redirect("~/DrugList.aspx");
+        }
     }
 }

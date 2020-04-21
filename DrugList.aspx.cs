@@ -82,5 +82,24 @@ namespace UzimaRX
         {
             DrugListGridView.Visible = false;
         }
+
+        protected void DrugListGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            DrugListGridView.PageIndex = e.NewPageIndex;
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            string sqlquery = "Select *" +
+                "From[UzimaDrug]";
+            sqlcomm.Parameters.AddWithValue("DrugName", DrugListSearch.Text);
+            sqlcomm.CommandText = sqlquery;
+            sqlcomm.Connection = sqlconn;
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            sda.Fill(dt);
+            DrugListGridView.DataSource = dt;
+            DrugListGridView.DataBind();
+        }
     }
 }

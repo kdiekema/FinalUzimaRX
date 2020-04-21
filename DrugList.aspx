@@ -8,7 +8,7 @@
     <asp:Button ID="btnAll" runat="server" Text="Show All" OnClick="show_all_click" />
     <asp:Button ID="btnClear" runat="server" Text="Clear Search" OnClick="btn_clear_click" />
 
-    <asp:GridView ID="DrugListGridView" runat="server" AllowPaging="True" PageSize="15" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" Width="1181px">
+    <asp:GridView ID="DrugListGridView" runat="server" AllowPaging="True" PageSize="15" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" Width="1181px" OnPageIndexChanging ="DrugListGridView_PageIndexChanging">
         <Columns>
             <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" >
             <ControlStyle CssClass="center" />
