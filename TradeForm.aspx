@@ -1,14 +1,11 @@
-﻿<%@ Page Title="Trade Forum" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="trade.aspx.cs" Inherits="UzimaRX.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TradeForm.aspx.cs" Inherits="UzimaRX.TradeForm" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %></h2>
-    &nbsp;&nbsp;&nbsp;
-     <a class="btn btn-default" target="_blank" href="../TradeForm"> Request or Trade a Drug &raquo;</a>
-    <br />
-    <br />
+    <h3>Post a drug to trade or Request a drug you need</h3>
 
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="TradeID" DataSourceID="SqlDataSource1" ForeColor="Black" Width="95%" AllowPaging="True" AllowSorting="True">
-        <Columns>
+    <br />
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="TradeID" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="50px" Width="80%" AutoGenerateInsertButton="True">
+        <Fields>
             <asp:BoundField DataField="TradeID" HeaderText="TradeID" InsertVisible="False" ReadOnly="True" SortExpression="TradeID" />
             <asp:BoundField DataField="TraderName" HeaderText="TraderName" SortExpression="TraderName" />
             <asp:CheckBoxField DataField="Have" HeaderText="Have" SortExpression="Have" />
@@ -17,17 +14,8 @@
             <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
             <asp:BoundField DataField="TraderLocation" HeaderText="TraderLocation" SortExpression="TraderLocation" />
             <asp:BoundField DataField="ContactInformation" HeaderText="ContactInformation" SortExpression="ContactInformation" />
-        </Columns>
-        <FooterStyle BackColor="#CCCCCC" />
-        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-        <RowStyle BackColor="White" />
-        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-        <SortedAscendingCellStyle BackColor="#F1F1F1" />
-        <SortedAscendingHeaderStyle BackColor="#808080" />
-        <SortedDescendingCellStyle BackColor="#CAC9C9" />
-        <SortedDescendingHeaderStyle BackColor="#383838" />
-    </asp:GridView>
+        </Fields>
+    </asp:DetailsView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [UzimaTrades]" DeleteCommand="DELETE FROM [UzimaTrades] WHERE [TradeID] = @TradeID" InsertCommand="INSERT INTO [UzimaTrades] ([TraderName], [Have], [Need], [DrugName], [Quantity], [TraderLocation], [ContactInformation]) VALUES (@TraderName, @Have, @Need, @DrugName, @Quantity, @TraderLocation, @ContactInformation)" UpdateCommand="UPDATE [UzimaTrades] SET [TraderName] = @TraderName, [Have] = @Have, [Need] = @Need, [DrugName] = @DrugName, [Quantity] = @Quantity, [TraderLocation] = @TraderLocation, [ContactInformation] = @ContactInformation WHERE [TradeID] = @TradeID">
         <DeleteParameters>
             <asp:Parameter Name="TradeID" Type="Int32" />
@@ -53,9 +41,4 @@
         </UpdateParameters>
     </asp:SqlDataSource>
 
-    <br />
-
 </asp:Content>
-
-
-

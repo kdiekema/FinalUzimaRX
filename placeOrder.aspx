@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <h1>Order an Item</h1>
         <div>
-            <asp:GridView ID="PlaceOrderGridview" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+            <asp:GridView ID="PlaceOrderGridview" runat="server" AllowPaging="true" OnPageIndexChanging="PlaceOrderGridview_PageIndexChanging" PageSize="15" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                 <Columns>
                     <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" />
                     <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" />
@@ -36,7 +36,7 @@
             </asp:GridView>
 
             Order Quantity <asp:TextBox ID="OrderQuantity" runat="server"></asp:TextBox>
-            <asp:Button ID="OrderBtn" runat="server" Text="Order" />
+            <asp:Button ID="OrderBtn" runat="server" Text="Order" OnClick="OrderBtn_Click" />
 
         </div>
     </form>

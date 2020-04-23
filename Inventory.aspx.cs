@@ -20,7 +20,7 @@ namespace UzimaRX
             SqlCommand sqlcomm = new SqlCommand();
             string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate] " +
                 "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
-                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 0";
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 0";
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             DataTable dt = new DataTable();
@@ -78,6 +78,26 @@ namespace UzimaRX
         protected void btn_clear_click(object sender, EventArgs e)
         {
             InventoryGridview.Visible = false;
+        }
+
+        protected void InventoryGridview_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            InventoryGridview.PageIndex = e.NewPageIndex;
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            string sqlquery = "Select [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate], [UzimaInventory].[Id]" +
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 0";
+            sqlcomm.Parameters.AddWithValue("DrugName", InventorySearch.Text);
+            sqlcomm.CommandText = sqlquery;
+            sqlcomm.Connection = sqlconn;
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            sda.Fill(dt);
+            InventoryGridview.DataSource = dt;
+            InventoryGridview.DataBind();
         }
     }
 }

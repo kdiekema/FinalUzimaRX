@@ -18,9 +18,9 @@ namespace UzimaRX
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
-            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate] " +
-                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
-                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 1";
+            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [DateOrdered] " +
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus] " +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [StatusID] = 1";
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             DataTable dt = new DataTable();
@@ -42,11 +42,11 @@ namespace UzimaRX
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
-            string sqlquery = "UPDATE UzimaInventory" + " SET [StatusId] = 0" + " WHERE [Id] = " + value;
+            string sqlquery = "UPDATE UzimaInventory" + " SET [StatusId] = 2" + " WHERE [Id] = " + value;
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             sqlcomm.ExecuteNonQuery();
-            Response.Redirect("~/ReceiveOrder.aspx");
+            Response.Redirect("~/SendOrder.aspx");
         }
     }
 }

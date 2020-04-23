@@ -18,9 +18,9 @@ namespace UzimaRX
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
-            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate] " +
-                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
-                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 2";
+            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [DateOrdered], [CurrentLocationId], [ExpirationDate] " +
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus]" +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND [UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [StatusID] = 2";
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             DataTable dt = new DataTable();
@@ -47,6 +47,25 @@ namespace UzimaRX
             sqlcomm.Connection = sqlconn;
             sqlcomm.ExecuteNonQuery();
             Response.Redirect("~/ReceiveOrder.aspx");
+        }
+
+        protected void ReceiveOrderGridview_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            ReceiveOrderGridview.PageIndex = e.NewPageIndex;
+            string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [DateOrdered], [CurrentLocationId], [ExpirationDate] " +
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus]" +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND [UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [StatusID] = 2";
+            sqlcomm.CommandText = sqlquery;
+            sqlcomm.Connection = sqlconn;
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            sda.Fill(dt);
+            ReceiveOrderGridview.DataSource = dt;
+            ReceiveOrderGridview.DataBind();
         }
     }
 }
