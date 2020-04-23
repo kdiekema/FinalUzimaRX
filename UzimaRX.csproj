@@ -184,7 +184,6 @@
     <Content Include="ErrorPage.aspx" />
     <Content Include="Expired.aspx" />
     <Content Include="Expiring.aspx" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -196,8 +195,10 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Images\pilane.ico" />
     <Content Include="Inventory.aspx" />
     <Content Include="Locations.aspx" />
+    <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="ReceiveOrder.aspx" />
     <Content Include="SendOrder.aspx" />

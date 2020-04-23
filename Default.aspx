@@ -4,7 +4,7 @@
     <br />
     <br />
 
-     <div class="row">
+     <div class="row" style="background-color: #222222; color:white; padding: 3px; margin: 5px; border-radius: 10px;" >
         <div class="col-md-6">
             <h2>Expired drugs</h2>
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="95%">
@@ -103,6 +103,9 @@ ORDER BY UzimaInventory.ExpirationDate ASC
          <br />
          <br />
     </div>
+      <br />
+         <br />
+
      <div class="row">
         <div class="col-md-4">
             <h4 class ="Gray">SquareSpace</h4>
