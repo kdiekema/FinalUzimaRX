@@ -5,14 +5,33 @@
   
     <asp:GridView ID="SendOrderGridview" runat="server" AllowPaging="True" AllowSorting="False" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" PageSize="15" Width="95%">
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Inventory ID" />
-                <asp:BoundField DataField="DrugName" HeaderText="Drug Name" SortExpression="DrugName" />              
-                <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
-                <asp:BoundField DataField="DateOrdered" HeaderText="Date Ordered" DataFormatString="{0:dd/MM/yyyy}" SortExpression="DateOrdered" />
+                <asp:BoundField DataField="Id" HeaderText="Inventory ID" >
+                    <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                <asp:BoundField DataField="DrugName" HeaderText="Drug Name" SortExpression="DrugName" >
+                    <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" >
+                    <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                <asp:BoundField DataField="DateOrdered" HeaderText="Date Ordered" DataFormatString="{0:dd/MM/yyyy}" SortExpression="DateOrdered" >
+                    <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
                 <asp:TemplateField HeaderText="Send Order">
                     <ItemTemplate>
-                        <asp:Button ID="SendOrderBtn" runat="server" OnClick="SendOrderBtn_Click" Text="Send Order" />
+                        <asp:Button ID="SendOrderBtn" CssClass="btn btn-default" runat="server" OnClick="SendOrderBtn_Click" Text="Send Order" />
                     </ItemTemplate>
+                    <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
                 </asp:TemplateField>
             </Columns>
             <FooterStyle BackColor="#CCCCCC" />

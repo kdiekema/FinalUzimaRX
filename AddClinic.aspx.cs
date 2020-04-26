@@ -25,26 +25,38 @@ namespace UzimaRX
             clearFields();
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
+    protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
-            {
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString());
-                string query = "INSERT INTO UzimaLocation VALUES(@LocationName, @Address, @Phone) ";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Name", txtLName.Text);
+         if (Page.IsValid)
+         {
+                string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(mainconn);
+                con.Open();
+                SqlCommand sqlcomm = new SqlCommand();
+                string insertSql = "INSERT INTO [UzimaLocations](LocationName,Address,Phone,Type,Supplier) OUTPUT INSERTED.Id VALUES (@LocationName,@Address,@Phone,@Type,@Supplier);";
+                SqlCommand cmd = new SqlCommand(insertSql, con);
+
+                cmd.Parameters.AddWithValue("@LocationName", txtLName.Text);
                 cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
                 cmd.Parameters.AddWithValue("@Phone", txtPhone.Text);
+                cmd.Parameters.AddWithValue("@Type", "Clinic");
+                cmd.Parameters.AddWithValue("@Supplier", ddlSupp.SelectedValue);
 
-                con.Open();
-                cmd.ExecuteScalar();
-                con.Close();
+
+                var LocationId = (int)cmd.ExecuteScalar();
+
+                lblSubmit.Visible = true;
+                lblSubmit.Text = "Submitted";
             }
+
 
         }
 
-            protected void clearFields()
+        protected void clearFields()
         {
+            txtLName.Text = "";
+            txtAddress.Text = "";
+            txtPhone.Text = "";
             lblSubmit.Visible = false;
         }
     }

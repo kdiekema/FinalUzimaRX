@@ -12,17 +12,61 @@
         <div>
             <asp:GridView ID="PlaceOrderGridview" runat="server" AllowPaging="true" OnPageIndexChanging="PlaceOrderGridview_PageIndexChanging" PageSize="15" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                 <Columns>
-                    <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" />
-                    <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" />
-                    <asp:BoundField DataField="BrandName" HeaderText="BrandName" SortExpression="BrandName" />
-                    <asp:BoundField DataField="ApplicationNumber" HeaderText="ApplicationNumber" SortExpression="ApplicationNumber" />
-                    <asp:BoundField DataField="Manufacturer" HeaderText="Manufacturer" SortExpression="Manufacturer" />
-                    <asp:BoundField DataField="ManufacturerLocation" HeaderText="ManufacturerLocation" SortExpression="ManufacturerLocation" />
-                    <asp:BoundField DataField="ApprovalNumber" HeaderText="ApprovalNumber" SortExpression="ApprovalNumber" />
-                    <asp:BoundField DataField="Schedule" HeaderText="Schedule" SortExpression="Schedule" />
-                    <asp:BoundField DataField="License" HeaderText="License" SortExpression="License" />
-                    <asp:BoundField DataField="Ingredients" HeaderText="Ingredients" SortExpression="Ingredients" />
-                    <asp:BoundField DataField="PackSize" HeaderText="PackSize" SortExpression="PackSize" />
+                    <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="BrandName" HeaderText="BrandName" SortExpression="BrandName" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="ApplicationNumber" HeaderText="ApplicationNumber" SortExpression="ApplicationNumber" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="Manufacturer" HeaderText="Manufacturer" SortExpression="Manufacturer" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="ManufacturerLocation" HeaderText="ManufacturerLocation" SortExpression="ManufacturerLocation" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="ApprovalNumber" HeaderText="ApprovalNumber" SortExpression="ApprovalNumber" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="Schedule" HeaderText="Schedule" SortExpression="Schedule" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="License" HeaderText="License" SortExpression="License" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="Ingredients" HeaderText="Ingredients" SortExpression="Ingredients" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                    <asp:BoundField DataField="PackSize" HeaderText="PackSize" SortExpression="PackSize" >
+                        <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
                 </Columns>
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

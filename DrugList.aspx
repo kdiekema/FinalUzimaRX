@@ -4,11 +4,12 @@
     <h2><%: Title %></h2>
 
     Search by Drug Name: <asp:TextBox ID="DrugListSearch" runat="server"></asp:TextBox>
-    <asp:Button ID="DrugListSearchBtn" runat="server" Text="Search" OnClick="InventorySearchBtn_Click"/>
-    <asp:Button ID="btnAll" runat="server" Text="Show All" OnClick="show_all_click" />
-    <asp:Button ID="btnClear" runat="server" Text="Clear Search" OnClick="btn_clear_click" />
+    <asp:Button ID="DrugListSearchBtn" CssClass="btn btn-default" runat="server" Text="Search" OnClick="InventorySearchBtn_Click"/>
+    <asp:Button ID="btnAll" runat="server" CssClass="btn btn-default" Text="Show All" OnClick="show_all_click" />
+    <asp:Button ID="btnClear" runat="server" CssClass="btn btn-default" Text="Clear Search" OnClick="btn_clear_click" />
 
-    <asp:GridView ID="DrugListGridView" runat="server" AllowPaging="True" PageSize="15" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" Width="1181px" OnPageIndexChanging ="DrugListGridView_PageIndexChanging">
+    <asp:GridView ID="DrugListGridView" runat="server" AllowPaging="True" PageSize="15" AllowSorting="False" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" Width="1181px" OnPageIndexChanging ="DrugListGridView_PageIndexChanging">
+        <PagerStyle Cssclass="pages"/>
         <Columns>
             <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" >
             <ControlStyle CssClass="center" />

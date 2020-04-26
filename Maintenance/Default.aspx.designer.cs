@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UzimaRX {
+namespace UzimaRX.Maintenance {
     
     
-    public partial class Inventory {
+    public partial class Default {
         
         /// <summary>
-        /// InventorySearch control.
+        /// grdRoles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox InventorySearch;
+        protected global::System.Web.UI.WebControls.GridView grdRoles;
         
         /// <summary>
-        /// InventorySearchBtn control.
+        /// dvRoles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button InventorySearchBtn;
+        protected global::System.Web.UI.WebControls.DetailsView dvRoles;
         
         /// <summary>
-        /// btnAll control.
+        /// ddlUsers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAll;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUsers;
         
         /// <summary>
-        /// btnClear control.
+        /// lstRoles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClear;
+        protected global::System.Web.UI.WebControls.ListBox lstRoles;
         
         /// <summary>
-        /// Button2 control.
+        /// btnAddRoles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
-        
-        /// <summary>
-        /// InventoryGridview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView InventoryGridview;
+        protected global::System.Web.UI.WebControls.Button btnAddRoles;
     }
 }

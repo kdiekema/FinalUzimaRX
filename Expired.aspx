@@ -4,12 +4,36 @@
     <h2><%: Title %></h2>
     <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="95%" AllowPaging="True" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
         <Columns>
-            <asp:CommandField ShowEditButton="True" HeaderText ="Destroy" />
-             <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
-            <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" />
-            <asp:BoundField DataField="Quantity" HeaderText="Quantity" ReadOnly="True" SortExpression="Quantity" />
-            <asp:BoundField DataField="LocationName" HeaderText="LocationName" SortExpression="LocationName" />
-            <asp:BoundField DataField="ExpirationDate" HeaderText="ExpirationDate" SortExpression="ExpirationDate" />
+            <asp:CommandField ShowEditButton="True" HeaderText ="Destroy" >
+                <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:CommandField>
+             <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" >
+                 <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" >
+                <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="Quantity" HeaderText="Quantity" ReadOnly="True" SortExpression="Quantity" >
+                <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="LocationName" HeaderText="LocationName" SortExpression="LocationName" >
+                <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="ExpirationDate" HeaderText="ExpirationDate" SortExpression="ExpirationDate" >
+                <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
         </Columns>
         <FooterStyle BackColor="#CCCCCC" />
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

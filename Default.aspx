@@ -50,11 +50,11 @@ GROUP BY UzimaDrug.DrugName, UzimaLocation.LocationName, UzimaInventory.Expirati
 ORDER BY UzimaInventory.ExpirationDate ASC
 "></asp:SqlDataSource>
             <br />
-            <a class="link" target="_blank" href="../expired"> Complete expired drugs list</a>
+            <a class="linkblue" target="_blank" href="../expired"> Complete expired drugs list</a>
         </div>
         <div class="col-md-6">
             <h2>Expiring -&nbsp; next 60 days</h2>
-            <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+            <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="95%">
                 <Columns>
                     <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" >
                         <ControlStyle CssClass="center" />
@@ -97,7 +97,7 @@ GROUP BY UzimaDrug.DrugName, UzimaLocation.LocationName, UzimaInventory.Expirati
 ORDER BY UzimaInventory.ExpirationDate ASC
                 "></asp:SqlDataSource>
             <br />
-          <a class="link" target="_blank" href="../expiring"> Complete expriring drugs list </a>
+          <a class="linkblue" target="_blank" href="../expiring"> Complete expriring drugs list </a>
 
         </div>
          <br />
