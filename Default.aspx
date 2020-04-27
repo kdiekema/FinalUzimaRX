@@ -4,7 +4,7 @@
     <br />
     <br />
 
-     <div class="row" style="background-color: #222222; color:white; padding: 3px; margin: 5px; border-radius: 10px;" >
+     <div class="row" style="background-color: #808080; color:white; padding: 3px; margin: 5px; border-radius: 10px;" >
         <div class="col-md-6">
             <h2>Expired drugs</h2>
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="95%">
@@ -51,6 +51,7 @@ ORDER BY UzimaInventory.ExpirationDate ASC
 "></asp:SqlDataSource>
             <br />
             <a class="linkblue" target="_blank" href="../expired"> Complete expired drugs list</a>
+            <br />
         </div>
         <div class="col-md-6">
             <h2>Expiring -&nbsp; next 60 days</h2>
@@ -99,9 +100,9 @@ ORDER BY UzimaInventory.ExpirationDate ASC
             <br />
           <a class="linkblue" target="_blank" href="../expiring"> Complete expriring drugs list </a>
 
+            <br />
+
         </div>
-         <br />
-         <br />
     </div>
       <br />
          <br />
@@ -111,7 +112,7 @@ ORDER BY UzimaInventory.ExpirationDate ASC
             <h4 class ="Gray">SquareSpace</h4>
             <p class="Gray">
                 The UzimaRx Square Space was created to tell Rapula and UzimaRx&#39;s story and has functionality for customer ordering<p /> <p>
-                <a class="btn btn-default" target="_blank" href="https://www.squarespace.com">SquareSpace »</a>
+                <a class="btn btn-default" target="_blank" href="https://pilanepharm.squarespace.com">SquareSpace »</a>
             </p>
         </div>
         <div class="col-md-4">

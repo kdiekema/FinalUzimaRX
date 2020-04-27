@@ -4,11 +4,6 @@
     <h2><%: Title %></h2>
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="95%">
         <Columns>
-            <asp:CommandField ShowEditButton="True" HeaderText ="Destroy" >
-                <ControlStyle CssClass="center" />
-            <HeaderStyle CssClass="center" />
-            <ItemStyle CssClass="center" />
-            </asp:CommandField>
              <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" >
                  <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
@@ -34,6 +29,12 @@
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
             </asp:BoundField>
+               <asp:CommandField ShowEditButton="True" HeaderText ="Trade" EditText="Trade Drug">
+                <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+                   <ControlStyle ForeColor ="MediumBlue" />
+            <ItemStyle CssClass="center" />
+            </asp:CommandField>
         </Columns>
         <FooterStyle BackColor="#CCCCCC" />
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
