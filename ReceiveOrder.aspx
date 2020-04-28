@@ -63,4 +63,5 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
     </asp:GridView>
+    <asp:Button ID="ReceiveOrderDownload" runat="server" Text="Download Orders to be Received" OnClick="ReceiveOrderDownload_Click" />
 </asp:Content>

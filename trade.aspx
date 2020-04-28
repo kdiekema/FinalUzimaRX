@@ -9,12 +9,12 @@
 
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="TradeID" DataSourceID="SqlDataSource1" ForeColor="Black" Width="95%" AllowPaging="True" AllowSorting="True">
         <Columns>
-            <asp:BoundField DataField="TradeID" HeaderText="TradeID" InsertVisible="False" ReadOnly="True" SortExpression="TradeID" >
+            <asp:BoundField DataField="TradeID" HeaderText="Trade ID" InsertVisible="False" ReadOnly="True" SortExpression="TradeID" >
                 <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
             </asp:BoundField>
-            <asp:BoundField DataField="TraderName" HeaderText="TraderName" SortExpression="TraderName" >
+            <asp:BoundField DataField="TraderName" HeaderText="Trader Name" SortExpression="TraderName" >
                 <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
@@ -29,7 +29,7 @@
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
             </asp:CheckBoxField>
-            <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" >
+            <asp:BoundField DataField="DrugName" HeaderText="Drug Name" SortExpression="DrugName" >
                 <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
@@ -39,16 +39,22 @@
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
             </asp:BoundField>
-            <asp:BoundField DataField="TraderLocation" HeaderText="TraderLocation" SortExpression="TraderLocation" >
+            <asp:BoundField DataField="TraderLocation" HeaderText="Trader Location" SortExpression="TraderLocation" >
                 <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
             </asp:BoundField>
-            <asp:BoundField DataField="ContactInformation" HeaderText="ContactInformation" SortExpression="ContactInformation" >
+            <asp:BoundField DataField="ContactInformation" HeaderText="Contact Information" SortExpression="ContactInformation" >
                 <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
             </asp:BoundField>
+                        <asp:CommandField ShowDeleteButton="True" HeaderText ="Trade Complete" DeleteText="Complete Trade"  >
+                <ControlStyle CssClass="center" />
+                                               <ControlStyle ForeColor ="MediumBlue" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:CommandField>
         </Columns>
         <FooterStyle BackColor="#CCCCCC" />
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
