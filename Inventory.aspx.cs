@@ -7,6 +7,10 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using iTextSharp.tool.xml;
 
 namespace UzimaRX
 {
@@ -99,5 +103,34 @@ namespace UzimaRX
             InventoryGridview.DataSource = dt;
             InventoryGridview.DataBind();
         }
+
+        protected void DownloadInventory_Click(object sender, EventArgs e)
+        {
+            Response.ContentType = "application/pdf";
+            Response.AddHeader("content-disposition", "attachment;filename=Inventory.pdf");
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            StringWriter sw = new StringWriter();
+            HtmlTextWriter hw = new HtmlTextWriter(sw);
+            InventoryGridview.RenderControl(hw);
+            StringReader sr = new StringReader(sw.ToString());
+            Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+            PdfWriter writer = PdfWriter.GetInstance(pdfdoc, Response.OutputStream);
+            pdfdoc.Open();
+            XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfdoc, sr);
+            pdfdoc.Close();
+            Response.Write(pdfdoc);
+            Response.End();
+            InventoryGridview.AllowPaging = true;
+            InventoryGridview.DataBind();
+
+
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            
+        }
+
     }
+
 }

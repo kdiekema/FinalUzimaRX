@@ -61,5 +61,5 @@ ORDER BY UzimaInventory.ExpirationDate ASC
     </asp:SqlDataSource>
     <br />
 <br />
-
+    <asp:Button ID="DownloadExpiring" runat="server" Text="Download Expiring List" OnClick="DownloadExpiring_Click" />
 </asp:Content>

@@ -7,6 +7,10 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.IO;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using iTextSharp.tool.xml;
 
 namespace UzimaRX
 {
