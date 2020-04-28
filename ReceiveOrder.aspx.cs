@@ -37,12 +37,12 @@ namespace UzimaRX
             int index = gvr.RowIndex;
             string value = ReceiveOrderGridview.Rows[index].Cells[0].Text;
 
-
             string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
             string sqlquery = "UPDATE UzimaInventory" + " SET [StatusId] = 0" + " WHERE [Id] = " + value;
+
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             sqlcomm.ExecuteNonQuery();

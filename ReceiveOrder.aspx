@@ -29,18 +29,21 @@
                     <ItemTemplate>
                         <asp:DropDownList ID="ddlSupp" runat="server" DataSourceID="SqlDataSource1" DataTextField="LocationName" DataValueField="LocationName" Height="31px">
                              <asp:ListItem Selected="True" Value="None">- Select Supplier -</asp:ListItem>
-                        </asp:DropDownList>
-                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:uzimarxConnectionString %>" SelectCommand="SELECT UzimaLocation.LocationName FROM UzimaLocation INNER JOIN UzimaLocationType ON UzimaLocation.Id = UzimaLocationType.LocationId WHERE (UzimaLocationType.LocationType = N'Supplier') OR (UzimaLocationType.LocationType = N'Hospital')"></asp:SqlDataSource>
+                        </asp:DropDownList> 
+                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT LocationName FROM UzimaLocations"></asp:SqlDataSource>
                     </ItemTemplate>
                     <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
                     </asp:TemplateField>
-                <asp:BoundField DataField="ExpirationDate" HeaderText="Expiration Date" >
+                <asp:TemplateField HeaderText="Expiration Date" >
+                    <ItemTemplate>
+                        <asp:TextBox ID="txtExpire" runat="server" CssClass="form-control txtbox"></asp:TextBox>
+                    </ItemTemplate>
                     <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
-            </asp:BoundField>
+            </asp:TemplateField>
                 <asp:TemplateField HeaderText="Receive Order">
                     <ItemTemplate>
                         <asp:Button Id="ReceiveOrderBtn" CssClass="btn btn-default" runat="server" OnClick="ReceiveOrderBtn_Click" Text="Receive Order" />

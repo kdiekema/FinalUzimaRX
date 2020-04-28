@@ -20,7 +20,7 @@ namespace UzimaRX.Maintenance
         protected void Page_Load(object sender, EventArgs e)
         {
             userMgr = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            //roleMgr = Context.GetOwinContext().Get<ApplicationRoleManager>();
+            roleMgr = Context.GetOwinContext().Get<ApplicationRoleManager>();
         }
 
         // Select methods
@@ -30,7 +30,7 @@ namespace UzimaRX.Maintenance
         }
         public IQueryable<ApplicationUser> grdUsers_GetData()
         {
-            return userMgr.Users;
+           return userMgr.Users;
         }
 
         public object dvRoles_GetItem([Control] string grdRoles)

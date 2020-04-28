@@ -202,6 +202,7 @@
     <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="ReceiveOrder.aspx" />
+    <Content Include="RecOrder.aspx" />
     <Content Include="SendOrder.aspx" />
     <Content Include="TBD.aspx" />
     <Content Include="trade.aspx" />
@@ -459,6 +460,13 @@
     </Compile>
     <Compile Include="ReceiveOrder.aspx.designer.cs">
       <DependentUpon>ReceiveOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecOrder.aspx.cs">
+      <DependentUpon>RecOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecOrder.aspx.designer.cs">
+      <DependentUpon>RecOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="SendOrder.aspx.cs">
       <DependentUpon>SendOrder.aspx</DependentUpon>
