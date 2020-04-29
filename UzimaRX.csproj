@@ -206,8 +206,10 @@
     <Content Include="Inventory.aspx" />
     <Content Include="Locations.aspx" />
     <Content Include="Maintenance\Default.aspx" />
+    <Content Include="PendingReceive.aspx" />
     <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
+    <Content Include="Receive.aspx" />
     <Content Include="ReceiveOrder.aspx" />
     <Content Include="RecOrder.aspx" />
     <Content Include="SendOrder.aspx" />
@@ -461,12 +463,26 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="PendingReceive.aspx.cs">
+      <DependentUpon>PendingReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PendingReceive.aspx.designer.cs">
+      <DependentUpon>PendingReceive.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PlaceOrder.aspx.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PlaceOrder.aspx.designer.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive.aspx.cs">
+      <DependentUpon>Receive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive.aspx.designer.cs">
+      <DependentUpon>Receive.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReceiveOrder.aspx.cs">
       <DependentUpon>ReceiveOrder.aspx</DependentUpon>

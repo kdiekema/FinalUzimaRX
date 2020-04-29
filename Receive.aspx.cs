@@ -7,10 +7,11 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Globalization;
 
 namespace UzimaRX
 {
-    public partial class Dispense : System.Web.UI.Page
+    public partial class Receive : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,31 +19,40 @@ namespace UzimaRX
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
-            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate] " +
-                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocations] " +
-                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocations].[Id] AND [UzimaInventory].[Id] = "+ Request.QueryString["Id"];
+            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [DateOrdered], [CurrentLocationId], [ExpirationDate] " +
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus]" +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND [UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [UzimaInventory].[Id] = " + Request.QueryString["Id"];
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             DataTable dt = new DataTable();
             SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
             sda.Fill(dt);
-            DispenseGridview.DataSource = dt;
-            DispenseGridview.DataBind();
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
         }
 
-        protected void DispenseBtn_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
+            string expiration = DateTime.Parse(tbExpirationDate.Text).ToString();
+
             string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
             string sqlquery = "UPDATE [UzimaInventory]" +
-                "SET [UzimaInventory].[StatusId] = 3" +
-                "WHERE [UzimaInventory].[Id] = " + Request.QueryString["Id"];
+               "SET [UzimaInventory].[StatusId] = 0, [UzimaInventory].[CurrentLocationId] =" + ddlLocation.SelectedValue + ", [UzimaInventory].[ExpirationDate] = convert(datetime, '" + tbExpirationDate.Text + "', 103) WHERE [UzimaInventory].[Id] = " + Request.QueryString["Id"];
+
+            SqlCommand cmd = new SqlCommand(sqlquery, sqlconn);
+            cmd.Parameters.AddWithValue("@CurrentLocationId", ddlLocation.SelectedValue);
+            cmd.Parameters.AddWithValue("@ExpirationDate", "convert(datetime, '" + tbExpirationDate.Text + "', 103)");
+
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             sqlcomm.ExecuteNonQuery();
             Response.Redirect("~/Inventory.aspx");
+
+
+
         }
     }
 }

@@ -15,11 +15,7 @@
             <HeaderStyle CssClass="center" />
             <ItemStyle CssClass="center" />
             </asp:BoundField>
-                <asp:BoundField DataField="Quantity" HeaderText="Quantity" ReadOnly="True" SortExpression="Quantity" >
-                    <ControlStyle CssClass="center" />
-            <HeaderStyle CssClass="center" />
-            <ItemStyle CssClass="center" />
-            </asp:BoundField>
+              
                 <asp:BoundField DataField="LocationName" HeaderText="LocationName" SortExpression="LocationName" >
                     <ControlStyle CssClass="center" />
             <HeaderStyle CssClass="center" />
@@ -47,13 +43,13 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT UzimaInventory.Id, UzimaDrug.DrugName, COUNT(UzimaInventory.DrugId) AS Quantity, UzimaLocation.LocationName, UzimaInventory.ExpirationDate
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT UzimaInventory.Id, UzimaDrug.DrugName, UzimaLocations.LocationName, UzimaInventory.ExpirationDate
 FROM UzimaInventory
 JOIN UzimaDrug ON UzimaDrug.id = UzimaInventory.DrugID
-JOIN UzimaLocation ON UzimaInventory.CurrentLocationID = UzimaLocation.id
+JOIN UzimaLocations ON UzimaInventory.CurrentLocationID = UzimaLocations.id
 JOIN UzimaStatus ON UzimaStatus.id = UzimaInventory.StatusId
 WHERE UzimaStatus.id = 4
-GROUP BY UzimaInventory.Id, UzimaDrug.DrugName, UzimaLocation.LocationName, UzimaInventory.ExpirationDate
+GROUP BY UzimaInventory.Id, UzimaDrug.DrugName, UzimaLocations.LocationName, UzimaInventory.ExpirationDate
 ORDER BY UzimaInventory.ExpirationDate ASC" UpdateCommand="UPDATE UzimaInventory SET StatusId = 0 WHERE [ID] = @Id">         <UpdateParameters>
             <asp:Parameter Name="Id" Type="Int32" />
         </UpdateParameters></asp:SqlDataSource>
