@@ -10,7 +10,7 @@
 namespace UzimaRX {
     
     
-    public partial class DurgList {
+    public partial class DrugList {
         
         /// <summary>
         /// DrugListSearch control.

@@ -14,7 +14,7 @@ using iTextSharp.tool.xml;
 
 namespace UzimaRX
 {
-    public partial class DurgList : System.Web.UI.Page
+    public partial class DrugList : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,6 +31,7 @@ namespace UzimaRX
             sda.Fill(dt);
             DrugListGridView.DataSource = dt;
             DrugListGridView.DataBind();*/
+
             
         }
 

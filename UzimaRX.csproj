@@ -176,6 +176,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddClinic.aspx" />
     <Content Include="AddHospital.aspx" />
+    <Content Include="AddInventory.aspx" />
     <Content Include="AddSupplier.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -367,6 +368,13 @@
     </Compile>
     <Compile Include="AddHospital.aspx.designer.cs">
       <DependentUpon>AddHospital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddInventory.aspx.cs">
+      <DependentUpon>AddInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddInventory.aspx.designer.cs">
+      <DependentUpon>AddInventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddSupplier.aspx.cs">
       <DependentUpon>AddSupplier.aspx</DependentUpon>

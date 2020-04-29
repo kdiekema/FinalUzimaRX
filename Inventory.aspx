@@ -9,7 +9,7 @@
         <asp:Button ID="InventorySearchBtn" CssClass="btn btn-default" runat="server" Text="Search" OnClick="InventorySearchBtn_Click"/>
          <asp:Button ID="btnAll" runat="server" CssClass="btn btn-default" Text="Show All" OnClick="show_all_click" />
          <asp:Button ID="btnClear" runat="server" CssClass="btn btn-default" Text="Clear Search" OnClick="btn_clear_click" />
-        <asp:Button ID="Button2" runat="server" CssClass="btn btn-default" Text="Add Inventory" />
+        <asp:Button ID="btnAddInventory" runat="server" CssClass="btn btn-default" Text="Add Inventory" OnClick="btnAddInventory_Click" />
         <asp:GridView ID="InventoryGridview" runat="server" AllowPaging="True" AllowSorting="False" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" OnPageIndexChanging="InventoryGridview_PageIndexChanging" PageSize="15" Width="95%" NavigateUrl="Dispense.aspx?Id={0}&Name={1}&ExpirationDate={2}">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Inventory ID" Visible="false">
