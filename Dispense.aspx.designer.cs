@@ -31,15 +31,6 @@ namespace UzimaRX {
         protected global::System.Web.UI.WebControls.GridView DispenseGridview;
         
         /// <summary>
-        /// DispenseQuantity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DispenseQuantity;
-        
-        /// <summary>
         /// DispenseBtn control.
         /// </summary>
         /// <remarks>

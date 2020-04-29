@@ -56,8 +56,8 @@
 
 
 
-            Dispense Quantity <asp:TextBox ID="DispenseQuantity" runat="server"></asp:TextBox>
-            <asp:Button ID="DispenseBtn" CssClass="btn btn-default" runat="server" Text="Dispense" />
+            <%-- Dispense Quantity <asp:TextBox ID="DispenseQuantity" runat="server"></asp:TextBox> --%>
+            <asp:Button ID="DispenseBtn" CssClass="btn btn-default" runat="server" Text="Dispense" OnClick="DispenseBtn_Click" />
         </div>
     </form>
 </body>
