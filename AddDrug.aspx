@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddDrug.aspx.cs" Inherits="UzimaRX.AddDrug" %>
+﻿<%@ Page Title="Sample Form for Add Drugs" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddDrug.aspx.cs" Inherits="UzimaRX.AddDrug" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
        <h2><%: Title %></h2>
@@ -8,7 +8,7 @@
     <br />
     </div> 
     <div class="form-group col-md-12">
-        <label class="control-label col-sm-3">Location Name:</label>
+        <label class="control-label col-sm-3">Drug Name:</label>
         <div class="col-sm-5">
             <asp:TextBox ID="txtLName" runat="server" CssClass="form-control txtbox"></asp:TextBox>
         </div>
@@ -33,7 +33,7 @@
         </div>
 
     <div class="form-group col-md-12">
-        <label class="control-label col-sm-3">Address:</label>
+        <label class="control-label col-sm-3">Expiration Date:</label>
         <div class="col-sm-5">
             <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control txtbox"></asp:TextBox>
         </div>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="form-group col-md-12">
-        <label class="control-label col-sm-3">Phone:</label>
+        <label class="control-label col-sm-3">Order Date:</label>
         <div class="col-sm-5">
             <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control txtbox"></asp:TextBox>
         </div>

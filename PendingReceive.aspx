@@ -5,13 +5,41 @@
 
         <asp:GridView ID="GridView1" width=95% runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataSourceID="SqlDataSource1" ForeColor="Black">
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" />
-                <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
-                <asp:BoundField DataField="DateOrdered" HeaderText="DateOrdered" SortExpression="DateOrdered" />
-                <asp:BoundField DataField="CurrentLocationId" HeaderText="CurrentLocationId" SortExpression="CurrentLocationId" />
-                <asp:BoundField DataField="ExpirationDate" HeaderText="ExpirationDate" SortExpression="ExpirationDate" />
-            <asp:HyperLinkField Text="Recieve" ItemStyle-CssClass="center" DataNavigateURLFields="Id" DataNavigateUrlFormatString="~\Receive.aspx?Id={0}" target="_blank" />
+                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" >
+            <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName" >
+            <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" >
+            <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                <asp:BoundField DataField="DateOrdered" HeaderText="DateOrdered" SortExpression="DateOrdered" >
+            <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                <asp:BoundField DataField="CurrentLocationId" HeaderText="CurrentLocationId" SortExpression="CurrentLocationId" >
+            <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+                <asp:BoundField DataField="ExpirationDate" HeaderText="ExpirationDate" SortExpression="ExpirationDate" >
+            <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:BoundField>
+            <asp:HyperLinkField Text="Recieve" ItemStyle-CssClass="center" DataNavigateURLFields="Id" DataNavigateUrlFormatString="~\Receive.aspx?Id={0}" target="_blank" >
+            <ControlStyle CssClass="center" />
+            <HeaderStyle CssClass="center" />
+            <ItemStyle CssClass="center" />
+            </asp:HyperLinkField>
 
                 </Columns>
             <FooterStyle BackColor="#CCCCCC" />
@@ -24,6 +52,7 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+        <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="Select [UzimaInventory].[Id], [DrugName], [Status], [DateOrdered], [CurrentLocationId], [ExpirationDate] From[UzimaDrug], [UzimaInventory], [UzimaStatus] Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND [UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [StatusID] = 2"></asp:SqlDataSource>
 
     </p>

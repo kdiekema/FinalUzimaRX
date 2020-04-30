@@ -207,9 +207,11 @@
     <Content Include="Inventory.aspx" />
     <Content Include="Locations.aspx" />
     <Content Include="Admin.aspx" />
+    <Content Include="PendingReceive.aspx" />
     <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Profile.aspx" />
+    <Content Include="Receive.aspx" />
     <Content Include="ReceiveOrder.aspx" />
     <Content Include="RecOrder.aspx" />
     <Content Include="RecOrders.aspx" />
@@ -491,6 +493,13 @@
     </Compile>
     <Compile Include="Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive.aspx.cs">
+      <DependentUpon>Receive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive.aspx.designer.cs">
+      <DependentUpon>Receive.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReceiveOrder.aspx.cs">
       <DependentUpon>ReceiveOrder.aspx</DependentUpon>
