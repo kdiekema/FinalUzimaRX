@@ -473,8 +473,6 @@ C:\Users\kdiek\Desktop\Year 4 Semester 2\PTG-APPLICATION-Rebuild\obj\Debug\Uzima
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.dll
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xml
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xmlworker.dll
-<<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.dll
 C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.xmlworker.dll
 C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.xml
@@ -516,9 +514,6 @@ C:\Users\Isaac Perrilles\source\repos\UzimaRX\bin\roslyn\vbc.exe.config
 C:\Users\Isaac Perrilles\source\repos\UzimaRX\bin\roslyn\vbc.rsp
 C:\Users\Isaac Perrilles\source\repos\UzimaRX\bin\roslyn\VBCSCompiler.exe
 C:\Users\Isaac Perrilles\source\repos\UzimaRX\bin\roslyn\VBCSCompiler.exe.config
-=======
-=======
->>>>>>> 77475f9c564758053bcb3881236f31e8a4de3945
 C:\Users\kdiek\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.dll
 C:\Users\kdiek\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xmlworker.dll
 C:\Users\kdiek\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xml
@@ -627,12 +622,6 @@ C:\Users\kdiek\Documents\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.csproj.CoreCo
 C:\Users\kdiek\Documents\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.csproj.CopyComplete
 C:\Users\kdiek\Documents\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.dll
 C:\Users\kdiek\Documents\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.pdb
-<<<<<<< HEAD
->>>>>>> master
-=======
-=======
 C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.dll
 C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.xmlworker.dll
 C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.xml
->>>>>>> Isaac
->>>>>>> 77475f9c564758053bcb3881236f31e8a4de3945
