@@ -33,7 +33,6 @@ namespace UzimaRX
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string expiration = DateTime.Parse(tbExpirationDate.Text).ToString();
 
             string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);

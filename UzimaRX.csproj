@@ -175,6 +175,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddClinic.aspx" />
+    <Content Include="AddDrug.aspx" />
     <Content Include="AddHospital.aspx" />
     <Content Include="AddInventory.aspx" />
     <Content Include="AddSupplier.aspx" />
@@ -363,6 +364,13 @@
     </Compile>
     <Compile Include="AddClinic.aspx.designer.cs">
       <DependentUpon>AddClinic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddDrug.aspx.cs">
+      <DependentUpon>AddDrug.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddDrug.aspx.designer.cs">
+      <DependentUpon>AddDrug.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddHospital.aspx.cs">
       <DependentUpon>AddHospital.aspx</DependentUpon>
