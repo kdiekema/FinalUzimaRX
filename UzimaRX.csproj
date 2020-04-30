@@ -206,18 +206,15 @@
     <Content Include="Images\pilane.ico" />
     <Content Include="Inventory.aspx" />
     <Content Include="Locations.aspx" />
-<<<<<<< HEAD
     <Content Include="Maintenance\Default.aspx" />
     <Content Include="PendingReceive.aspx" />
     <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Receive.aspx" />
-=======
     <Content Include="Admin.aspx" />
     <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Profile.aspx" />
->>>>>>> Isaac
     <Content Include="ReceiveOrder.aspx" />
     <Content Include="RecOrder.aspx" />
     <Content Include="RecOrders.aspx" />
