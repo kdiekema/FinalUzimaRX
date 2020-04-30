@@ -59,7 +59,7 @@
               <asp:Parameter Name="Supplier" Type="String" />
           </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:Button ID="DownloadLocations" runat="server" Text="Download Locations" OnClick="DownloadLocations_Click" />
+    <asp:Button ID="DownloadLocations" runat="server" Text="Download Locations" CssClass="btn btn-default" OnClick="DownloadLocations_Click" />
     <br />
 
 

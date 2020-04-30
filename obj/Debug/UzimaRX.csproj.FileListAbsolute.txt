@@ -511,6 +511,7 @@ C:\Users\kdiek\Desktop\Year 4 Semester 2\PTG-APPLICATION-Rebuild\obj\Debug\Uzima
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.dll
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xml
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xmlworker.dll
+<<<<<<< HEAD
 C:\Users\kdiek\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.dll
 C:\Users\kdiek\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xmlworker.dll
 C:\Users\kdiek\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xml
@@ -619,3 +620,8 @@ C:\Users\kdiek\Documents\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.csproj.CoreCo
 C:\Users\kdiek\Documents\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.csproj.CopyComplete
 C:\Users\kdiek\Documents\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.dll
 C:\Users\kdiek\Documents\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.pdb
+=======
+C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.dll
+C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.xmlworker.dll
+C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.xml
+>>>>>>> Isaac

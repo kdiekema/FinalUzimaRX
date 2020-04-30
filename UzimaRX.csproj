@@ -206,13 +206,21 @@
     <Content Include="Images\pilane.ico" />
     <Content Include="Inventory.aspx" />
     <Content Include="Locations.aspx" />
+<<<<<<< HEAD
     <Content Include="Maintenance\Default.aspx" />
     <Content Include="PendingReceive.aspx" />
     <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Receive.aspx" />
+=======
+    <Content Include="Admin.aspx" />
+    <Content Include="pilane.ico" />
+    <Content Include="PlaceOrder.aspx" />
+    <Content Include="Profile.aspx" />
+>>>>>>> Isaac
     <Content Include="ReceiveOrder.aspx" />
     <Content Include="RecOrder.aspx" />
+    <Content Include="RecOrders.aspx" />
     <Content Include="SendOrder.aspx" />
     <Content Include="TBD.aspx" />
     <Content Include="trade.aspx" />
@@ -463,12 +471,12 @@
     <Compile Include="Locations.aspx.designer.cs">
       <DependentUpon>Locations.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Maintenance\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Maintenance\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="PendingReceive.aspx.cs">
@@ -485,12 +493,21 @@
     <Compile Include="PlaceOrder.aspx.designer.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Receive.aspx.cs">
       <DependentUpon>Receive.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Receive.aspx.designer.cs">
       <DependentUpon>Receive.aspx</DependentUpon>
+=======
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+>>>>>>> Isaac
     </Compile>
     <Compile Include="ReceiveOrder.aspx.cs">
       <DependentUpon>ReceiveOrder.aspx</DependentUpon>
@@ -505,6 +522,13 @@
     </Compile>
     <Compile Include="RecOrder.aspx.designer.cs">
       <DependentUpon>RecOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecOrders.aspx.cs">
+      <DependentUpon>RecOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecOrders.aspx.designer.cs">
+      <DependentUpon>RecOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="SendOrder.aspx.cs">
       <DependentUpon>SendOrder.aspx</DependentUpon>
@@ -560,6 +584,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Maintenance\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
