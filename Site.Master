@@ -55,7 +55,7 @@
                           <button class="dropbtn">Orders</button>
                           <div class="dropdown-content">
                             <a runat="server" href="~/SendOrder">Send Order</a>
-                            <a runat="server" href="~/ReceiveOrder">Receive Order</a>
+                            <a runat="server" href="~/PendingReceive">Receive Order</a>
                           </div>
                         </li>
                         <li><a runat="server" href="~/Locations">Locations</a></li>

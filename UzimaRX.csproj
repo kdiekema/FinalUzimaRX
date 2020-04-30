@@ -177,6 +177,7 @@
     <Content Include="AddClinic.aspx" />
     <Content Include="AddDrug.aspx" />
     <Content Include="AddHospital.aspx" />
+    <Content Include="AddInventory.aspx" />
     <Content Include="AddSupplier.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -378,6 +379,13 @@
     <Compile Include="AddHospital.aspx.designer.cs">
       <DependentUpon>AddHospital.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddInventory.aspx.cs">
+      <DependentUpon>AddInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddInventory.aspx.designer.cs">
+      <DependentUpon>AddInventory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddSupplier.aspx.cs">
       <DependentUpon>AddSupplier.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -463,6 +471,13 @@
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="PendingReceive.aspx.cs">
+      <DependentUpon>PendingReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PendingReceive.aspx.designer.cs">
+      <DependentUpon>PendingReceive.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PlaceOrder.aspx.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -596,7 +611,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

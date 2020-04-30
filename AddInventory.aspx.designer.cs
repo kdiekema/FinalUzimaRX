@@ -10,25 +10,25 @@
 namespace UzimaRX {
     
     
-    public partial class Inventory {
+    public partial class AddInventory {
         
         /// <summary>
-        /// InventorySearch control.
+        /// AddInventorySearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox InventorySearch;
+        protected global::System.Web.UI.WebControls.TextBox AddInventorySearch;
         
         /// <summary>
-        /// InventorySearchBtn control.
+        /// AddInventorySearchBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button InventorySearchBtn;
+        protected global::System.Web.UI.WebControls.Button AddInventorySearchBtn;
         
         /// <summary>
         /// btnAll control.
@@ -49,30 +49,66 @@ namespace UzimaRX {
         protected global::System.Web.UI.WebControls.Button btnClear;
         
         /// <summary>
-        /// btnAddInventory control.
+        /// AddInventoryGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddInventory;
+        protected global::System.Web.UI.WebControls.GridView AddInventoryGridView;
         
         /// <summary>
-        /// InventoryGridview control.
+        /// AddInventory2Gridview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView InventoryGridview;
+        protected global::System.Web.UI.WebControls.GridView AddInventory2Gridview;
         
         /// <summary>
-        /// DownloadInventory control.
+        /// ddlSupp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DownloadInventory;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSupp;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
+        /// txtExpire control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtExpire;
+        
+        /// <summary>
+        /// txtQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQuantity;
+        
+        /// <summary>
+        /// AddInventory2Btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddInventory2Btn;
     }
 }

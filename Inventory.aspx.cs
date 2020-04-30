@@ -23,8 +23,8 @@ namespace UzimaRX
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
             string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate] " +
-                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
-                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 0";
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocations] " +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [UzimaInventory].[CurrentLocationId] = [UzimaLocations].[Id] AND [StatusID] = 0";
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             DataTable dt = new DataTable();
@@ -41,8 +41,8 @@ namespace UzimaRX
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
             string sqlquery = "Select [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate], [UzimaInventory].[Id]" +
-                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
-                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 0 AND [DrugName] like '%'+@DrugName+'%'";
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocations] " +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocations].[Id] AND [StatusID] = 0 AND [DrugName] like '%'+@DrugName+'%'";
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
             sqlcomm.Parameters.AddWithValue("DrugName", InventorySearch.Text);
@@ -66,8 +66,8 @@ namespace UzimaRX
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
             string sqlquery = "Select [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate], [UzimaInventory].[Id]" +
-                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
-                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 0";
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocations] " +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocations].[Id] AND [StatusID] = 0";
             sqlcomm.Parameters.AddWithValue("DrugName", InventorySearch.Text);
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
@@ -92,8 +92,8 @@ namespace UzimaRX
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
             string sqlquery = "Select [DrugName], [Status], [LocationName], [DateOrdered], [ExpirationDate], [UzimaInventory].[Id]" +
-                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocation] " +
-                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocation].[Id] AND [StatusID] = 0";
+                "From[UzimaDrug], [UzimaInventory], [UzimaStatus], [UzimaLocations] " +
+                "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND[UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND[UzimaInventory].[CurrentLocationId] = [UzimaLocations].[Id] AND [StatusID] = 0";
             sqlcomm.Parameters.AddWithValue("DrugName", InventorySearch.Text);
             sqlcomm.CommandText = sqlquery;
             sqlcomm.Connection = sqlconn;
@@ -131,6 +131,10 @@ namespace UzimaRX
             
         }
 
+        protected void btnAddInventory_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AddInventory.aspx");
+        }
     }
 
 }

@@ -10,51 +10,51 @@
 namespace UzimaRX {
     
     
-    public partial class DrugList {
+    public partial class Receive {
         
         /// <summary>
-        /// DrugListSearch control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DrugListSearch;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// DrugListSearchBtn control.
+        /// ddlLocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DrugListSearchBtn;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLocation;
         
         /// <summary>
-        /// btnAll control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAll;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// btnClear control.
+        /// tbExpirationDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClear;
+        protected global::System.Web.UI.WebControls.TextBox tbExpirationDate;
         
         /// <summary>
-        /// DrugListGridView control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView DrugListGridView;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
