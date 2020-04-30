@@ -55,7 +55,7 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
-        <asp:Button ID="DownloadInventory" runat="server" Text="Download Current Table" OnClick="DownloadInventory_Click" />
+        <asp:Button ID="DownloadInventory" CssClass="btn btn-default" runat="server" Text="Download Current Table" OnClick="DownloadInventory_Click" />
     </p>
 
     </asp:Content>

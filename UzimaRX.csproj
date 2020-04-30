@@ -175,6 +175,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddClinic.aspx" />
+    <Content Include="AddDrug.aspx" />
     <Content Include="AddHospital.aspx" />
     <Content Include="AddSupplier.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -204,11 +205,13 @@
     <Content Include="Images\pilane.ico" />
     <Content Include="Inventory.aspx" />
     <Content Include="Locations.aspx" />
-    <Content Include="Maintenance\Default.aspx" />
+    <Content Include="Admin.aspx" />
     <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
+    <Content Include="Profile.aspx" />
     <Content Include="ReceiveOrder.aspx" />
     <Content Include="RecOrder.aspx" />
+    <Content Include="RecOrders.aspx" />
     <Content Include="SendOrder.aspx" />
     <Content Include="TBD.aspx" />
     <Content Include="trade.aspx" />
@@ -361,6 +364,13 @@
     <Compile Include="AddClinic.aspx.designer.cs">
       <DependentUpon>AddClinic.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddDrug.aspx.cs">
+      <DependentUpon>AddDrug.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddDrug.aspx.designer.cs">
+      <DependentUpon>AddDrug.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddHospital.aspx.cs">
       <DependentUpon>AddHospital.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -445,12 +455,12 @@
     <Compile Include="Locations.aspx.designer.cs">
       <DependentUpon>Locations.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Maintenance\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Maintenance\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="PlaceOrder.aspx.cs">
@@ -459,6 +469,13 @@
     </Compile>
     <Compile Include="PlaceOrder.aspx.designer.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReceiveOrder.aspx.cs">
       <DependentUpon>ReceiveOrder.aspx</DependentUpon>
@@ -473,6 +490,13 @@
     </Compile>
     <Compile Include="RecOrder.aspx.designer.cs">
       <DependentUpon>RecOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecOrders.aspx.cs">
+      <DependentUpon>RecOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecOrders.aspx.designer.cs">
+      <DependentUpon>RecOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="SendOrder.aspx.cs">
       <DependentUpon>SendOrder.aspx</DependentUpon>
@@ -528,6 +552,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Maintenance\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

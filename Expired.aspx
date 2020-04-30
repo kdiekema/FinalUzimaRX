@@ -59,7 +59,7 @@ ORDER BY UzimaInventory.ExpirationDate ASC" UpdateCommand="UPDATE [UzimaInventor
         </UpdateParameters>
 </asp:SqlDataSource>
     <br />
-    <asp:Button ID="DownloadExpired" runat="server" Text="Download Expired Drug List" OnClick="DownloadExpired_Click" />
+    <asp:Button ID="DownloadExpired" CssClass="btn btn-default" runat="server" Text="Download Expired Drug List" OnClick="DownloadExpired_Click" />
 
 
 </asp:Content>

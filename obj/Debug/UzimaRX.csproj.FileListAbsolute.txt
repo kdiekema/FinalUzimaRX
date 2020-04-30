@@ -511,3 +511,6 @@ C:\Users\kdiek\Desktop\Year 4 Semester 2\PTG-APPLICATION-Rebuild\obj\Debug\Uzima
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.dll
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xml
 C:\Users\Alec Kozakowski\Desktop\PTG-APPLICATION-Rebuild\bin\itextsharp.xmlworker.dll
+C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.dll
+C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.xmlworker.dll
+C:\Users\Isaac Perrilles\source\repos\UzimaRx\bin\itextsharp.xml

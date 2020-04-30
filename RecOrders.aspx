@@ -1,16 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PlaceOrder.aspx.cs" Inherits="UzimaRX.PlaceOrder" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Place Order</title>
-</head>
-<body>
-    <form id="form1" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RecOrders.aspx.cs" Inherits="UzimaRX.RecOrders" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <h1>Order an Item</h1>
         <div>
-            <asp:GridView ID="PlaceOrderGridview" runat="server" AllowPaging="true" OnPageIndexChanging="PlaceOrderGridview_PageIndexChanging" PageSize="15" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+            <asp:GridView ID="RecOrderGridview" runat="server" AllowPaging="true" OnPageIndexChanging="PlaceOrderGridview_PageIndexChanging" PageSize="15" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                 <Columns>
                     <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" >
                         <ControlStyle CssClass="center" />
@@ -79,10 +71,13 @@
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
 
-            Order Quantity <asp:TextBox ID="OrderQuantity" runat="server"></asp:TextBox>
-            <asp:Button ID="OrderBtn"CssClass="btn btn-default" runat="server" Text="Order" OnClick="OrderBtn_Click" />
-
+              <asp:DropDownList ID="ddlSupp" runat="server" DataSourceID="SqlDataSource1" DataTextField="LocationName" DataValueField="LocationName" Height="31px">
+                             <asp:ListItem Selected="True" Value="None">- Select Supplier -</asp:ListItem>
+                        </asp:DropDownList> 
+                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT LocationName FROM UzimaLocations"></asp:SqlDataSource>
+                
+            Expiration <asp:TextBox ID="RecOrder" runat="server"></asp:TextBox>
+            <asp:Button ID="RecBtn" runat="server" Text="Receive Order" OnClick="RecBtn_Click" />
         </div>
-    </form>
-</body>
-</html>
+
+</asp:Content>
