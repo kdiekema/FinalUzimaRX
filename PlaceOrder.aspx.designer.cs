@@ -31,6 +31,15 @@ namespace UzimaRX {
         protected global::System.Web.UI.WebControls.GridView PlaceOrderGridview;
         
         /// <summary>
+        /// LblQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblQuantity;
+        
+        /// <summary>
         /// OrderQuantity control.
         /// </summary>
         /// <remarks>
@@ -38,5 +47,14 @@ namespace UzimaRX {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox OrderQuantity;
+        
+        /// <summary>
+        /// OrderBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button OrderBtn;
     }
 }

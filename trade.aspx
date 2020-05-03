@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
     &nbsp;&nbsp;&nbsp;
-     <a class="btn btn-default" target="_blank" href="../TradeForm"> Request or Trade a Drug &raquo;</a>
+     <a class="btn btn-default" href="../TradeForm"> Request or Trade a Drug &raquo;</a>
     <br />
     <br />
 

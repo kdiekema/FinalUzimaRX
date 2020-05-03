@@ -16,21 +16,21 @@
         </asp:GridView>
 
 </p>
-    <p>
-
-        &nbsp;&nbsp;
-
-        Current Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expiration Date</p>
-    <p>
-
-&nbsp;&nbsp;<asp:DropDownList ID="ddlLocation" runat="server" DataSourceID="SqlDataSource1" DataTextField="LocationName" DataValueField="Id">
+    <br />
+    <div>
+        <asp:Label ID="LblLocation" runat="server" Text="Current Location:"></asp:Label>
+        <asp:DropDownList ID="ddlLocation" runat="server" DataSourceID="SqlDataSource1" DataTextField="LocationName" DataValueField="Id">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [Id], [LocationName] FROM [UzimaLocations]"></asp:SqlDataSource>
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <asp:TextBox ID="tbExpirationDate"  runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Recieve" />
-
-</p>
+   
+    </div>
+    <br />
+    <div>
+        <asp:Label ID="LblExpire" runat="server" Text="Expiration Date:"></asp:Label>
+                <asp:TextBox ID="tbExpirationDate"  runat="server"></asp:TextBox>
+    </div>
+<br />
+    <div>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" class="btn btn-default" Text="Recieve" />
+</div>
 </asp:Content>

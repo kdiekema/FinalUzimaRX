@@ -19,7 +19,7 @@ namespace UzimaRX
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
-            string sqlquery = "Select [UzimaInventory].[Id], [DrugName], [Status], [DateOrdered], [CurrentLocationId], [ExpirationDate] " +
+            string sqlquery = "Select [UzimaInventory].[Id], [DrugName] AS Drug_Name, [Status], [DateOrdered] AS Date_Ordered, [CurrentLocationId] AS Current_Location, [ExpirationDate] AS Expiration_date " +
                 "From[UzimaDrug], [UzimaInventory], [UzimaStatus]" +
                 "Where[UzimaDrug].[Id] = [UzimaInventory].[DrugId] AND [UzimaStatus].[Id] = [UzimaInventory].[StatusId] AND [UzimaInventory].[Id] = " + Request.QueryString["Id"];
             sqlcomm.CommandText = sqlquery;

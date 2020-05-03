@@ -7,7 +7,7 @@
     <asp:Button ID="DrugListSearchBtn" CssClass="btn btn-default" runat="server" Text="Search" OnClick="InventorySearchBtn_Click"/>
     <asp:Button ID="btnAll" runat="server" CssClass="btn btn-default" Text="Show All" OnClick="show_all_click" />
     <asp:Button ID="btnClear" runat="server" CssClass="btn btn-default" Text="Clear Search" OnClick="btn_clear_click" />
-    <a class="btn btn-default" target="_blank" href="../AddDrug">Add Drug &raquo;</a>
+    <a class="btn btn-default" href="../AddDrug">Add Drug &raquo;</a>
 
     <asp:GridView ID="DrugListGridView" runat="server" AllowPaging="True" PageSize="15" AllowSorting="False" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" ForeColor="Black" Width="1181px" OnPageIndexChanging ="DrugListGridView_PageIndexChanging">
         <PagerStyle Cssclass="pages"/>

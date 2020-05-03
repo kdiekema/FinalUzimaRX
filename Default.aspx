@@ -50,7 +50,7 @@ GROUP BY UzimaDrug.DrugName, UzimaLocations.LocationName, UzimaInventory.Expirat
 ORDER BY UzimaInventory.ExpirationDate ASC
 "></asp:SqlDataSource>
             <br />
-            <a class="linkblue" target="_blank" href="../expired"> Complete expired drugs list</a>
+            <a class="btn btn-default" target="_blank" href="../expired">Complete expired drugs list &raquo;</a>
             <br />
         </div>
         <div class="col-md-6">
@@ -98,8 +98,7 @@ GROUP BY UzimaDrug.DrugName, UzimaLocations.LocationName, UzimaInventory.Expirat
 ORDER BY UzimaInventory.ExpirationDate ASC
                 "></asp:SqlDataSource>
             <br />
-          <a class="linkblue" target="_blank" href="../expiring"> Complete expriring drugs list </a>
-
+          <a class="btn btn-default" target="_blank" href="../expiring">Complete expriring drugs list &raquo;</a>
             <br />
 
         </div>

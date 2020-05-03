@@ -31,8 +31,7 @@ namespace UzimaRX
             sda.Fill(dt);
             DrugListGridView.DataSource = dt;
             DrugListGridView.DataBind();*/
-
-            
+     
         }
 
         protected void InventorySearchBtn_Click(object sender, EventArgs e)

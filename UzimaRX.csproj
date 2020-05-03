@@ -51,11 +51,16 @@
       <HintPath>packages\itextsharp.xmlworker.5.5.13.1\lib\itextsharp.xmlworker.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SendGrid, Version=9.14.1.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>packages\SendGrid.9.14.1\lib\net452\SendGrid.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -206,18 +211,16 @@
     <Content Include="Images\pilane.ico" />
     <Content Include="Inventory.aspx" />
     <Content Include="Locations.aspx" />
-    <Content Include="Admin.aspx" />
+    <Content Include="Maintenance\Default.aspx" />
     <Content Include="PendingReceive.aspx" />
     <Content Include="pilane.ico" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Receive.aspx" />
-    <Content Include="ReceiveOrder.aspx" />
-    <Content Include="RecOrder.aspx" />
-    <Content Include="RecOrders.aspx" />
     <Content Include="SendOrder.aspx" />
     <Content Include="TBD.aspx" />
     <Content Include="trade.aspx" />
+    <Content Include="Maintenance\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -465,12 +468,12 @@
     <Compile Include="Locations.aspx.designer.cs">
       <DependentUpon>Locations.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin.aspx.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
+    <Compile Include="Maintenance\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin.aspx.designer.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
+    <Compile Include="Maintenance\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="PendingReceive.aspx.cs">
@@ -500,27 +503,6 @@
     </Compile>
     <Compile Include="Receive.aspx.designer.cs">
       <DependentUpon>Receive.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ReceiveOrder.aspx.cs">
-      <DependentUpon>ReceiveOrder.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ReceiveOrder.aspx.designer.cs">
-      <DependentUpon>ReceiveOrder.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RecOrder.aspx.cs">
-      <DependentUpon>RecOrder.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RecOrder.aspx.designer.cs">
-      <DependentUpon>RecOrder.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RecOrders.aspx.cs">
-      <DependentUpon>RecOrders.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RecOrders.aspx.designer.cs">
-      <DependentUpon>RecOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="SendOrder.aspx.cs">
       <DependentUpon>SendOrder.aspx</DependentUpon>
@@ -576,7 +558,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Maintenance\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

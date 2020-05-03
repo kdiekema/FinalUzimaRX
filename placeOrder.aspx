@@ -78,10 +78,12 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
-
-            Order Quantity <asp:TextBox ID="OrderQuantity" runat="server"></asp:TextBox>
-            <asp:Button ID="OrderBtn"CssClass="btn btn-default" runat="server" Text="Order" OnClick="OrderBtn_Click" />
-
+            </div>
+        <br />
+        <div>
+            <asp:Label ID="LblQuantity" runat="server" Text="Order Quantity: "></asp:Label>
+            <asp:TextBox ID="OrderQuantity" runat="server"></asp:TextBox>
+            <asp:Button ID="OrderBtn" CssClass="btn btn-default" runat="server" Text="Order" OnClick="OrderBtn_Click" />
         </div>
     </form>
 </body>

@@ -727,3 +727,6 @@ C:\Users\Isaac Perrilles\source\repos\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.
 C:\Users\Isaac Perrilles\source\repos\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.csproj.CopyComplete
 C:\Users\Isaac Perrilles\source\repos\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.dll
 C:\Users\Isaac Perrilles\source\repos\PTG-APPLICATION-Rebuild\obj\Debug\UzimaRX.pdb
+C:\Users\Isaac Perrilles\source\repos\PTG-APPLICATION-Rebuild\bin\SendGrid.dll
+C:\Users\Isaac Perrilles\source\repos\PTG-APPLICATION-Rebuild\bin\SendGrid.pdb
+C:\Users\Isaac Perrilles\source\repos\PTG-APPLICATION-Rebuild\bin\SendGrid.xml
