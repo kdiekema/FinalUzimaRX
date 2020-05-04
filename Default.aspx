@@ -112,6 +112,7 @@ ORDER BY UzimaInventory.ExpirationDate ASC
             <p class="Gray">
                 The UzimaRx Square Space was created to tell Rapula and UzimaRx&#39;s story and has functionality for customer ordering<p /> <p>
                 <a class="btn btn-default" target="_blank" href="https://pilanepharm.squarespace.com">SquareSpace »</a>
+				<a class="btn btn-default" target="_blank" href="https://uploader.squarewebsites.org/#/sites">Access Prescription Uploads »</a>
             </p>
         </div>
         <div class="col-md-4">
