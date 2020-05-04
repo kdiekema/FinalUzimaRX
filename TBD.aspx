@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="To Be Destroyed" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TBD.aspx.cs" Inherits="UzimaRX.TBD" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>&nbsp;</h2>
+  <h2><%: Title %></h2>
     <p>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataSourceID="SqlDataSource1" ForeColor="Black" Width="95%">
             <Columns>
@@ -54,6 +54,8 @@ ORDER BY UzimaInventory.ExpirationDate ASC" UpdateCommand="UPDATE UzimaInventory
             <asp:Parameter Name="Id" Type="Int32" />
         </UpdateParameters></asp:SqlDataSource>
     </p>
-       
+    <p>
+        <asp:Button ID="DownloadTBD" CssClass="btn btn-default" runat="server" Text="Download Current Table" OnClick="DownloadTBD_Click" />
+    </p>   
 
 </asp:Content>

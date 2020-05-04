@@ -1,67 +1,58 @@
-﻿<%@ Page Title="Sample Form for Add Drugs" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddDrug.aspx.cs" Inherits="UzimaRX.AddDrug" %>
+﻿<%@ Page Title="Add Drugs" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddDrug.aspx.cs" Inherits="UzimaRX.AddDrug" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
        <h2><%: Title %></h2>
 
-<fieldset id="form1" runat="server" method="post" class="form-horizontal" defaultfocus="txtLName" defaultbutton="btnSubmit">
-    <div class="col-md-12">
-    <br />
-    </div> 
-    <div class="form-group col-md-12">
-        <label class="control-label col-sm-3">Drug Name:</label>
-        <div class="col-sm-5">
-            <asp:TextBox ID="txtLName" runat="server" CssClass="form-control txtbox"></asp:TextBox>
-        </div>
-        <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="rfvFirstName" runat="server"
-                ErrorMessage="Location Name" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtLName">Required</asp:RequiredFieldValidator>
-            </div>
-    </div>
 
-    <div class="form-group col-md-12">
-        <label class="control-label col-sm-3">Supplier:</label>
-        <div class="col-sm-5">
-            <asp:DropDownList ID="ddlSupp" runat="server" DataSourceID="SqlDataSource1" DataTextField="LocationName" DataValueField="LocationName" Height="31px">
-                <asp:ListItem Selected="True" Value="None">- Select Supplier -</asp:ListItem>
-            </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT LocationName FROM UzimaLocations I WHERE (Type = N'Supplier') OR (Type = N'Hospital')"></asp:SqlDataSource>
-        </div>
-          <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="rfvState" runat="server" InitialValue="None"
-                ErrorMessage="Supplier" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="ddlSupp"></asp:RequiredFieldValidator>
-       </div>
-        </div>
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="50px" Width="95%" AutoGenerateInsertButton="True">
+            <Fields>
+                <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" InsertVisible="False"/>
+                <asp:BoundField DataField="Barcode" HeaderText="Barcode" SortExpression="Barcode" />
+                <asp:BoundField DataField="DrugName" HeaderText="DrugName" SortExpression="DrugName"/>
+                <asp:BoundField DataField="BrandName" HeaderText="BrandName" SortExpression="BrandName"/>
+                <asp:BoundField DataField="ApplicationNumber" HeaderText="ApplicationNumber" SortExpression="ApplicationNumber"/>
+                <asp:BoundField DataField="Manufacturer" HeaderText="Manufacturer" SortExpression="Manufacturer"/>
+                <asp:BoundField DataField="ManufacturerLocation" HeaderText="ManufacturerLocation" SortExpression="ManufacturerLocation"/>
+                <asp:BoundField DataField="ApprovalNumber" HeaderText="ApprovalNumber" SortExpression="ApprovalNumber"/>
+                <asp:BoundField DataField="Schedule" HeaderText="Schedule" SortExpression="Schedule"/>
+                <asp:BoundField DataField="License" HeaderText="License" SortExpression="License"/>
+                <asp:BoundField DataField="Ingredients" HeaderText="Ingredients" SortExpression="Ingredients"/>
+                <asp:BoundField DataField="PackSize" HeaderText="PackSize" SortExpression="PackSize"/>
+            </Fields>
+        </asp:DetailsView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" DeleteCommand="DELETE FROM [UzimaDrug] WHERE [Id] = @Id" InsertCommand="INSERT INTO [UzimaDrug] ([Barcode], [DrugName], [BrandName], [ApplicationNumber], [Manufacturer], [ManufacturerLocation], [ApprovalNumber], [Schedule], [License], [Ingredients], [PackSize]) VALUES (@Barcode, @DrugName, @BrandName, @ApplicationNumber, @Manufacturer, @ManufacturerLocation, @ApprovalNumber, @Schedule, @License, @Ingredients, @PackSize)" SelectCommand="SELECT * FROM [UzimaDrug]" UpdateCommand="UPDATE [UzimaDrug] SET [Barcode] = @Barcode, [DrugName] = @DrugName, [BrandName] = @BrandName, [ApplicationNumber] = @ApplicationNumber, [Manufacturer] = @Manufacturer, [ManufacturerLocation] = @ManufacturerLocation, [ApprovalNumber] = @ApprovalNumber, [Schedule] = @Schedule, [License] = @License, [Ingredients] = @Ingredients, [PackSize] = @PackSize WHERE [Id] = @Id">
+            <DeleteParameters>
+                <asp:Parameter Name="Id" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="Barcode" Type="String" />
+                <asp:Parameter Name="DrugName" Type="String" />
+                <asp:Parameter Name="BrandName" Type="String" />
+                <asp:Parameter Name="ApplicationNumber" Type="String" />
+                <asp:Parameter Name="Manufacturer" Type="String" />
+                <asp:Parameter Name="ManufacturerLocation" Type="String" />
+                <asp:Parameter Name="ApprovalNumber" Type="String" />
+                <asp:Parameter Name="Schedule" Type="String" />
+                <asp:Parameter Name="License" Type="String" />
+                <asp:Parameter Name="Ingredients" Type="String" />
+                <asp:Parameter Name="PackSize" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="Barcode" Type="String" />
+                <asp:Parameter Name="DrugName" Type="String" />
+                <asp:Parameter Name="BrandName" Type="String" />
+                <asp:Parameter Name="ApplicationNumber" Type="String" />
+                <asp:Parameter Name="Manufacturer" Type="String" />
+                <asp:Parameter Name="ManufacturerLocation" Type="String" />
+                <asp:Parameter Name="ApprovalNumber" Type="String" />
+                <asp:Parameter Name="Schedule" Type="String" />
+                <asp:Parameter Name="License" Type="String" />
+                <asp:Parameter Name="Ingredients" Type="String" />
+                <asp:Parameter Name="PackSize" Type="String" />
+                <asp:Parameter Name="Id" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
 
-    <div class="form-group col-md-12">
-        <label class="control-label col-sm-3">Expiration Date:</label>
-        <div class="col-sm-5">
-            <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control txtbox"></asp:TextBox>
-        </div>
-        <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                ErrorMessage="Address" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtAddress">Required</asp:RequiredFieldValidator>
-        </div>
-    </div>
-
-    <div class="form-group col-md-12">
-        <label class="control-label col-sm-3">Order Date:</label>
-        <div class="col-sm-5">
-            <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control txtbox"></asp:TextBox>
-        </div>
-        <div class="col-sm-4">
-            <asp:RequiredFieldValidator ID="rfvPhone" runat="server"
-                ErrorMessage="Phone" CssClass="text-danger" Text="Required" Display="Dynamic" ControlToValidate="txtPhone">Required</asp:RequiredFieldValidator>
-           </div>
-    </div>
-
-    <div class="form-group col-md-12">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-5">
-        <asp:Button ID="btnSubmit" CssClass="btn btn-default" runat="server" Text="Submit"  OnClick="btnSubmit_Click" Width="125px" />
-        <asp:Button ID="btnClear" CssClass="btn btn-default" runat="server" Text="Clear" OnClick="btnClear_Click" Width="125px" />
-        </div>
-        <asp:label class="col-sm-4" ID="lblSubmit" runat="server"></asp:label>
-    </div>
-    </fieldset>
+    </p>
 
 </asp:Content>

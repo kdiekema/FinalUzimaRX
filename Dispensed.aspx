@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dispensed.aspx.cs" Inherits="UzimaRX.Dispensed" %>
+﻿<%@ Page Title="Dispensed" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dispensed.aspx.cs" Inherits="UzimaRX.Dispensed" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
@@ -57,5 +57,9 @@ GROUP BY UzimaInventory.Id, UzimaDrug.DrugName, UzimaInventory.DateOrdered, Uzim
 ORDER BY UzimaInventory.ExpirationDate ASC" UpdateCommand="UPDATE UzimaInventory SET StatusId = 4 WHERE [ID] = @Id">         <UpdateParameters>
             <asp:Parameter Name="Id" Type="Int32" />
         </UpdateParameters></asp:SqlDataSource>
+    </p>
+    <p>
+<asp:Button ID="DownloadDispensed" CssClass="btn btn-default" runat="server" Text="Download Current Table" OnClick="DownloadDispensed_Click" />
+
     </p>
 </asp:Content>

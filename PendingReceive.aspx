@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Pending Orders" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PendingReceive.aspx.cs" Inherits="UzimaRX.PendingReceive" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <h2><%: Title %></h2>
     <br /><br />
     <p>
 
