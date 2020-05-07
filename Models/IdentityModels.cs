@@ -92,7 +92,7 @@ namespace UzimaRX
             }
             else
             {
-                response.Redirect("~/");
+                response.Redirect("~/Master");
             }
         }
     }

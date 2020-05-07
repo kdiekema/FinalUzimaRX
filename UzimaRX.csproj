@@ -221,6 +221,9 @@
     <Content Include="TBD.aspx" />
     <Content Include="trade.aspx" />
     <Content Include="Maintenance\Web.config" />
+    <None Include="Properties\PublishProfiles\msci4350-uzimarx - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\msci4350-uzimarx - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\msci4350-uzimarx - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Expiring Drugs" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Expiring.aspx.cs" Inherits="UzimaRX.Expiring" %>
+﻿<%@ Page Title="Expiring Drugs" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Expiring.aspx.cs" Inherits="UzimaRX.Expiring" EnableEventValidation="false"%>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
